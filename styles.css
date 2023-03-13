@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500&display=swap");
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --darker-cyan: hsl(159, 33%, 30%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* ### Neutral */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+}
+
+p,
+span,
+.button {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  margin: 0;
+  background-color: var(--cream);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  background-color: var(--white);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.image {
+  min-width: 50%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/image-product-desktop.jpg");
+}
+
+.content {
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content span {
+  color: var(--dark-grayish-blue);
+  letter-spacing: 3px;
+}
+
+.content h1 {
+  font-size: 45px;
+  line-height: 1.1;
+  /* margin-top: 0; */
+}
+
+.content .paragraph {
+  margin-top: 0;
+  font-size: 16px;
+  color: var(--dark-grayish-blue);
+  line-height: 1.6;
+}
+
+.prices {
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.prices h1 {
+  color: var(--dark-cyan);
+}
+
+.prices span {
+  /* padding-bottom: 30px; */
+  padding-right: 20px;
+  text-decoration: line-through;
+  letter-spacing: 0;
+}
+
+.button {
+  display: flex;
+  border: none;
+  color: white;
+  background-color: var(--dark-cyan);
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--darker-cyan);
+}
+
+.button img {
+  padding-right: 10px;
+}
+
+@media (max-width: 870px) {
+  .card {
+    width: 345px;
+    height: 610px;
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    min-height: 40%;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .content span {
+    font-size: 14px;
+  }
+
+  .content h1 {
+    font-size: 30px;
+    line-height: 1;
+    color: var(--very-dark-blue);
+  }
+
+  .content .paragraph {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .prices {
+    margin-top: -10px;
+  }
+
+  .prices h1 {
+    color: var(--dark-cyan);
+  }
+
+  .prices span {
+    padding-right: 100px;
+  }
+
+  .button {
+    padding: 15px;
+  }
+}
